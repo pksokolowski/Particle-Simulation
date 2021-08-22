@@ -1,0 +1,3 @@
+package features.simulation.presentation
+
+interface ISimulationViewModel
