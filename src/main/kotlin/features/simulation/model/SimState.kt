@@ -12,22 +12,13 @@ data class MutableSimState(
 interface Particle {
     val x: Double
     val y: Double
-    val energy: Energy
+    val angle: Double
+    val speed: Double
 }
 
 data class MutableParticle(
     override var x: Double,
     override var y: Double,
-    override var energy: MutableEnergy
-) : Particle
-
-
-interface Energy {
-    val angle: Double
-    val speed: Double
-}
-
-data class MutableEnergy(
     override var angle: Double,
-    override var speed: Double
-) : Energy
+    override var speed: Double,
+) : Particle

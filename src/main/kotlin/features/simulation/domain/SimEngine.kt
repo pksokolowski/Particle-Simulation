@@ -9,8 +9,8 @@ import kotlin.math.sqrt
 class SimEngine {
     fun progress(state: MutableSimState): MutableSimState {
         state.particles.forEach { p ->
-            val newX = xProjectedAtAngle(p.energy.angle, p.energy.speed, p.x)
-            val newY = yProjectedAtAngle(p.energy.angle, p.energy.speed, p.y)
+            val newX = xProjectedAtAngle(p.angle, p.speed, p.x)
+            val newY = yProjectedAtAngle(p.angle, p.speed, p.y)
 
             p.x = newX
             p.y = newY
